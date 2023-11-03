@@ -23,12 +23,31 @@ int main()
 	do
 	{
 		cin >> List2[j];
-		if (List1[j] == -1)
+		if (List2[j] == -1)
 		{
 			break;
 		}
 		j++;
 	} while (List2[j] != -1);
-	
+	if (i != j)//If their lengths are different
+	{
+		cout << "They are not identical";
+	}
+	else
+	{
+		for (int k = 0; k < i; k++)
+		{
+			if (List1[k] != List2[k])
+			{
+				cout << "They are not identical";
+				break;
+			}
+			else if (List1[k] == List2[k])
+			{
+				cout << "They are identical";
+				break;
+			}
+		}
+	}
 	return 0;
 }

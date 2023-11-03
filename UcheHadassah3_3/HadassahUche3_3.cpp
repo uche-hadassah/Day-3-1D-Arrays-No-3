@@ -35,18 +35,20 @@ int main()
 	}
 	else
 	{
-		for (int k = 0; k < i; k++)
+		int k = 0;
+		while(k < i)
 		{
-			if (List1[k] != List2[k])
+			if (List1[k] != List2[k])//The moment it spots a difference it ends the loop
 			{
 				cout << "They are not identical";
 				break;
 			}
-			else if (List1[k] == List2[k])
-			{
-				cout << "They are identical";
-				break;
-			}
+			k++;//If it doesnt spot a difference, it repeats the loop again
+		}
+		//If no difference was spotted in the while loop,it compares the last element in the two arrays. They are bound to be the same
+		if (List1[k] == List2[k])
+		{
+			cout << "They are identical";
 		}
 	}
 	return 0;
